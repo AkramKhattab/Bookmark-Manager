@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+        <div class="form-container">
+            <input type="text" id="bookmarkName" placeholder="Site Name">
+            <input type="text" id="bookmarkURL" placeholder="Site URL">
+            <input type="text" id="bookmarkCategory" placeholder="Category">
+            <button id="submitBtn">Submit</button>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="bookmarkSearch" placeholder="Search Bookmarks">
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent"></tbody>
+        </table>
+        
+        <div id="detailsModal" class="modal">
+            <div class="modal-content" id="detailsContent">
+                <!-- Details will be injected here -->
+            </div>
+            <button id="closeDetails" class="modal-close">Close</button>
+        </div>
+
+        <div class="box-info d-none">
+            <div class="box-content">
+                <p>Error: Please fill in all fields correctly.</p>
+                <button id="closeBtn">Close</button>
+            </div>
+        </div>
+        
+        <div class="import-export">
+            <button id="exportBtn">Export Bookmarks</button>
+            <input type="file" id="importBtn" accept=".json">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
